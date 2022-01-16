@@ -95,6 +95,13 @@
             <version>2.9.2</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -120,9 +127,11 @@
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
+                        <!-- Zhe Wu, removed as per reviewer's instruction
                         <goals>
                             <goal>wsdl2java</goal>
                         </goals>
+                        -->
                     </execution>
                 </executions>
             </plugin>

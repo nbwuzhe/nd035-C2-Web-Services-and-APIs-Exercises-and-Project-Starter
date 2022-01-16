@@ -13,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -22,6 +25,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
  */
 @Entity
 @EntityListeners(AuditingEntityListener.class)
+@Getter
+@Setter
 public class Car {
 
     @Id
@@ -49,6 +54,7 @@ public class Car {
     @Transient
     private String price;
 
+    /* Zhe Wu, Removed after using lombok
     public Long getId() {
         return id;
     }
@@ -104,4 +110,5 @@ public class Car {
     public void setPrice(String price) {
         this.price = price;
     }
+    */
 }
